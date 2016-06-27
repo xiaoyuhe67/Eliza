@@ -27,6 +27,9 @@ public class Eliza {
 	
 	public static void main(String[] args)
 	{
+		
+		Counter mom = new Counter();
+		Thread th1=new Thread(mom);
 		hedgeSet.add("Please tell me more");
 		hedgeSet.add("Many of my patients tell me the same thing.");
 		hedgeSet.add("It is getting late, maybe we have better quit.");
@@ -35,6 +38,9 @@ public class Eliza {
 		System.out.println("Good day. What is your problem?");
 	    System.out.println("Enter your response here or Q to quit: ");
 		
+	    th1.start();
+		
+	    
 		while(1>0)
 		{
 			
@@ -93,6 +99,8 @@ public class Eliza {
 			}	
 			
 		}
+		th1.interrupt();
+		sc.close();
 	}
 	
 	
