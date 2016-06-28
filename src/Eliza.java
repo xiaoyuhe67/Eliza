@@ -18,6 +18,55 @@ public class Eliza {
 	
 	private static Random rand=new Random();
 	
+	public static Set<String> getHedgeSet() {
+		return hedgeSet;
+	}
+
+
+	public static void setHedgeSet(Set<String> hedgeSet) {
+		Eliza.hedgeSet = hedgeSet;
+	}
+
+
+	public static Set<String> getQualifierSet() {
+		return qualifierSet;
+	}
+
+
+	public static void setQualifierSet(Set<String> qualifierSet) {
+		Eliza.qualifierSet = qualifierSet;
+	}
+
+
+	public static int getHedges() {
+		return hedges;
+	}
+
+
+	public static void setHedges(int hedges) {
+		Eliza.hedges = hedges;
+	}
+
+
+	public static boolean isContain() {
+		return contain;
+	}
+
+
+	public static void setContain(boolean contain) {
+		Eliza.contain = contain;
+	}
+
+
+	public static int getQualify() {
+		return qualify;
+	}
+
+
+	public static void setQualify(int qualify) {
+		Eliza.qualify = qualify;
+	}
+
 	private static boolean contain=false;
 	
 	private static int qualify=rand.nextInt(2);
